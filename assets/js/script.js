@@ -5,15 +5,34 @@
 // 2- vous vérifirez sur une console.log() votre réussite.
 // 3- Dans une console.log() vous afficherez uniquement le contenu de la balise P (c'est-à-dire le texte et uniquement le txt)
 
-// 1-
+// selectionne mon élément html qui porte l'id element
 
-document
+let monElement = document.querySelector("#element");
 
-// 2- 
-let texte = document.querySelector("p");
+// un log du contenu de mon element
 
-console.log(texte);
+console.log(monElement);
 
-let txt = texte.textContent;
+// un log uniquement du texte contenu dans mon element
 
-console.log(txt);
+console.log(monElement.textContent);
+
+// modifier le text dans l'element qui porte l'id element
+
+monElement.textContent = "Hakuna Matata";
+
+// ajouter la class dark (que vous avez préalablement définie) à l'élément body de votre html. tout ça dans une function darkOrLight
+
+let bodyElement = document.querySelector("#body");
+console.log(bodyElement);
+
+function darkOrLight() {
+    // mon code
+    let classDark = "dark";
+    bodyElement.classList.add(classDark);
+}
+
+darkOrLight();
+
+
+
