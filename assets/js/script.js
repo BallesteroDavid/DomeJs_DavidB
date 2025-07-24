@@ -23,16 +23,71 @@ monElement.textContent = "Hakuna Matata";
 
 // ajouter la class dark (que vous avez préalablement définie) à l'élément body de votre html. tout ça dans une function darkOrLight
 
-let bodyElement = document.querySelector("#body");
-console.log(bodyElement);
+// let bodyElement = document.getElementById("body");
+// console.log(bodyElement);
+
+// id darkBtn
+// const darkBtn = document.getElementById("darkBtn");
+// console.log(darkBtn);
+// // id lightBtn
+// const lightBtn = document.getElementById("lightBtn");
+// console.log(lightBtn);
+// let classDark = "dark";
+
+
+// function dark() {
+//     // mon code
+//     bodyElement.classList.add(classDark)
+// }
+
+// function light() {
+//     bodyElement.classList.remove(classDark);
+// }
+
+// // au click executer darkOrLight()
+// // si on appuie sur darkBtn, dark mode s'active
+// darkBtn.addEventListener("click", dark);
+// // si on appuie sur lightBtn, light s'active
+// lightBtn.addEventListener("click", light);
+
+// problème les deux sont activés au même moment
+
+// correction 
+
+// variable qui contient l'élément html body
+// variable qui contient l'élément du body
+// const bodyElement = document.getElementById("bodyElement");
+// const darkBtn = document.getElementById("darkBtn");
+// const lightBtn = document.getElementById("lightBtn");
+
+// ma function pour ajouter la class css dark dans mon élément body
+
+// function darkOrLight() {
+    // bodyElement.classList.toggle("dark");
+    // "toggle est switch on/off" on n'a plus besoin de light
+// }
+
+// function Light() {
+    // bodyElement.classList.remove("dark");
+// }
+
+// j'initie un écouteur d'évènement sur un élément html btn qui porte l'id darkBtn
+
+// darkBtn.addEventListener("click", darkOrLight);
+// lightBtn.addEventListener("click", light);
+
+// donc
+
+const bodyElement = document.getElementById("bodyElement");
+const darkBtn = document.getElementById("darkBtn");
+let classDark = "dark";
 
 function darkOrLight() {
-    // mon code
-    let classDark = "dark";
-    bodyElement.classList.add(classDark);
+    bodyElement.classList.toggle("dark");
+    // "toggle est un switch on/off" on n'a plus besoin de light
 }
 
-darkOrLight();
-
+darkBtn.addEventListener("click", darkOrLight);
+darkOrLight()
 
 
